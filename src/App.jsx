@@ -1,5 +1,7 @@
 import React from 'react';
+import { Button } from '@mui/material';
 import { Dots } from 'loading-animations-react';
+import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
 
 import useStyles from './Style';
 import { useGetAPODQuery } from './services/NASA';
@@ -25,6 +27,14 @@ const App = () => {
           />
         </>
       )}
+      <Button
+        color="warning"
+        size="small"
+        variant="contained"
+        sx={{ width: 'fit-content !important' }}
+      >
+        <ChangeCircleIcon />
+      </Button>
     </div>
   );
 };
