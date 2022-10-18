@@ -5,11 +5,11 @@ export default makeStyles((theme) => ({
     width: '400px',
     height: '300px',
     padding: '5px',
-    backgroundColor: 'pink',
-    border: '1px solid black',
+    backgroundColor: 'black',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    color: 'white',
   },
 }));

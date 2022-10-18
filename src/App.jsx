@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box, Button, Link } from '@mui/material';
 import { Dots } from 'loading-animations-react';
 
 import useStyles from './Style';
@@ -24,12 +23,6 @@ const App = () => {
             copyright={data.copyright}
             description={data.explanation}
           />
-          <p>Random Image Component</p>
-          <Box>
-            <Button variant="outlined" color="warning">
-              Random Image
-            </Button>
-          </Box>
         </>
       )}
     </div>
