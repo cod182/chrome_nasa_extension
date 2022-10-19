@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Link } from '@mui/material';
 import useStyles from './Style';
 
-const ImageTile = ({ url, hdurl, title, copyright, description }) => {
+const ImageTile = ({ url, hdurl, title, copyright = 'NASA', description }) => {
   const classes = useStyles();
 
   return (

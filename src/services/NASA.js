@@ -15,5 +15,5 @@ export const nasaApi = createApi({
 });
 
 export const {
-  useGetAPODQuery, useGetImagesQuery, useGetRoverQuery, useGetRoversQuery
+  useGetAPODQuery, useGetImageQuery,
 } = nasaApi;

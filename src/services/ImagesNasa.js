@@ -6,13 +6,13 @@ export const imagesNasaApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://images-api.nasa.gov/' }),
   endpoints: (builder) => ({
 
-    //* Get images by search query
-    getNasaImages: builder.query({
+    //* Get images 
+    getNasaImage: builder.query({
       query: ({ query, page }) => { return `search?q=${query}&media_type=image&page=${page}` },
     }),
   }),
 });
 
 export const {
-  useGetNasaImagesQuery
+  useGetNasaImageQuery
 } = imagesNasaApi;
