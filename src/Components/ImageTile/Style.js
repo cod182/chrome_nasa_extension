@@ -10,7 +10,7 @@ export default makeStyles(() => ({
     overflow: 'hidden',
   },
   imageContainer: {
-    width: '400px',
+    width: '390px',
     height: '80%',
     borderRadius: '10px',
     overflow: 'hidden',

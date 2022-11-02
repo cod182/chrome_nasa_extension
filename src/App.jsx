@@ -48,41 +48,45 @@ const App = () => {
   return (
     <div className={classes.root}>
       {randomImgSearch ? (
-        <>
-          <ImageTile
-            url={randImg.links[0].href}
-            title={randImg?.data[0]?.title}
-            copyright={randImg?.data[0]?.photographer}
-            description={randImg?.data[0]?.explanation}
-          />
-          <Box>
-            <Button
-              sx={{ margin: '0 5px' }}
-              onClick={getRandomImg}
-              color="warning"
-              size="small"
-              variant="contained"
-            >
-              <ChangeCircle />
-            </Button>
-            <Button
-              sx={{ margin: '0 5px' }}
-              onClick={getApod}
-              color="warning"
-              size="small"
-              variant="contained"
-            >
-              <House />
-            </Button>
-          </Box>
-        </>
+        imageLoading ? (
+          <Dots />
+        ) : (
+          <>
+            <ImageTile
+              url={randImg.links[0].href}
+              title={randImg?.data[0]?.title}
+              copyright={randImg?.data[0]?.photographer}
+              description={randImg?.data[0]?.explanation}
+            />
+            <Box>
+              <Button
+                sx={{ margin: '0 5px' }}
+                onClick={getRandomImg}
+                color="warning"
+                size="small"
+                variant="contained"
+              >
+                <ChangeCircle />
+              </Button>
+              <Button
+                sx={{ margin: '0 5px' }}
+                onClick={getApod}
+                color="warning"
+                size="small"
+                variant="contained"
+              >
+                <House />
+              </Button>
+            </Box>
+          </>
+        )
       ) : isLoading ? (
         <Dots />
       ) : (
         <>
           <ImageTile
-            url={data.url}
-            hdurl={data.hdurl}
+            url={data.thumbnail_url ? data?.thumbnail_url : data?.url}
+            hdurl={data.thumbnail_url ? data?.url : data?.hdurl}
             title={data.title}
             copyright={data.copyright}
             description={data.explanation}
